@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+int ispalindrome(char *a)
+{
+	for(int i=0;i<strlen(a)/2;i++)
+	{
+		if(a[i]==a[strlen(a)-i-1]) continue;
+		return 0;
+	}
+	return 1;
+}
+int main()
+{
+	char a[10];
+	printf("Enter the String:");
+	scanf("%s",a);
+	if(ispalindrome(a)) printf("The String is Palindrome!!");
+	else printf("The String is Not an Palindrome!!");
+}
